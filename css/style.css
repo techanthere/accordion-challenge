@@ -1,0 +1,162 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root{
+  --very-dark-desaturated-blue: hsl(238, 29%, 16%);
+  --soft-red: hsl(14, 88%, 65%);
+  --soft-violet: hsl(273, 75%, 66%);
+  --soft-blue: hsl(240, 73%, 65%);
+  --gray: #ddd;
+  --main-background: hsl(0, 100%, 100%);
+  --font: 'Kumbh Sans', sans-serif;
+}
+body{
+  font-family: var(--font);
+  background-image: linear-gradient(var(--soft-violet),var(--soft-blue));
+  background-size: cover;
+  padding: 10rem 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+main{
+  width: 20rem;
+  background-color: ;
+  padding: 2rem;
+  border-radius: 20px;
+  background-color: var(--main-background);
+}
+.main__image{
+  width: 100%;
+  height: auto;
+  margin-bottom: 2rem;
+}
+.main__background--mobile{
+  position: absolute;
+  margin-left:0.5rem;
+}
+.main__illustration--mobile{
+  margin-top: -8rem;
+  position: relative;
+}
+.main__background--desktop{
+  display: none;
+}
+.main__illustration--desktop{
+  display: none;
+}
+.main__illustration--dt-box{
+  display: none;
+}
+h1{
+  text-align: center;
+  padding: 2rem 0 1rem 0;
+}
+.accordion__list{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.accordion__button--active{
+  border: none;
+  background: none;
+  padding:1rem 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--gray);
+  transition: 0.3s;
+}
+.accordion__button--active:hover{
+  color:var(--soft-red);
+  cursor: pointer;
+}
+
+.accordion__item{
+  list-style: none;
+  transition: 0.3s;
+  display: inline;
+}
+.accordion__desc{
+  display: none;
+  padding:1rem 0;
+  transition: 0.8s;
+  border-bottom: 1px solid var(--gray);
+}
+.accordion__desc--last{
+  border:none;
+}
+/* .accordion__desc--visible{
+} */
+.accordion__button--bold{
+  font-weight:bold;
+}
+ .accordion__button--bold + .accordion__desc--visible{
+  display:block;
+}
+.accordion__button--bold .accordion__img--active{
+  transform: rotate(180deg);
+}
+@media (min-width:900px){
+  body{
+    padding:2rem;
+  }
+  main{
+    overflow: hidden;
+    padding-left: 0;
+    min-width: 45rem;
+    max-width: 80%;
+    display:grid;
+    align-items: center;
+    justify-content: space-between;
+    grid-template-columns: 20% 45%;
+  }
+  .accordion__button{
+    text-align: left;
+  }
+  h1{
+    padding-top: 0;
+    text-align: inherit;
+  }
+  .main__image{
+    height: auto;
+    width: 100%;
+    position: relative;
+  }
+  .main__background--mobile{
+    display: none;
+  }
+  .main__illustration--mobile{
+    display: none;
+  }
+  .main__background--desktop{
+    display: inline;
+    position: absolute;
+    transform: translate(-70%, -40%);
+  }
+  .main__illustration--desktop{
+    background: url("../images/illustration-woman-online-desktop.svg") no-repeat;
+    background-size: contain;
+    position: relative;
+    display: inline-block;
+    height: 250px;
+    width: 350px;
+    margin-left:-20%;
+    transform: translateY(30%);
+  }
+  .main__illustration--dt-box{
+    display: inline;
+    position: relative;
+    width: 100%;
+    margin-top:-60%;
+    margin-left: -30%;
+    }
+    .accordion{
+      padding:0 1rem;
+    }
+}
