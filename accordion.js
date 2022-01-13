@@ -1,4 +1,4 @@
-btn =  document.querySelectorAll("button");
+let btn =  document.querySelectorAll("button");
 btn.forEach((btn, i) => {
       btn.addEventListener("click", function(){
       if(btn.getAttribute("aria-expanded") == "false"){
